@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+    body{
+        /* background-color:rgb(20, 95, 95); */
+        background-image: url('/static/images/virus.jpg.crdownload');
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container vh-100 " >
+    <div class="row">
+        <div class="col-sm-12 col-md-7" style="margin-top: 4rem;">
+            <div class="table-responsive">
+                <table class="table table-striped
+                table-hover	
+                table-borderless
+                table-primary
+                align-middle">
+                <thead class="table-light">
+                    <caption>Patient Report</caption>
+                    <tr>
+                        <th>Name</th>
+                        <th>Hepatitis (AI)</th>
+                        <th>Age</th>
+                        <th>Steroid</th>
+                        <th>Bilirubin</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for p in patients %}
+                    <tr class="table-primary" >
+                        <td scope="row">{{p.name}}</td>
+                        <td>
+                            {% if p.is_hepatitis %}
+                            <span class="text-danger">
+                                {{p.is_hepatitis}}
+                            </span>
+                            {% else %}
+                            <span class="text-primary">
+                                {{p.is_hepatitis}}
+                            </span>
+                            {% endif %}
+                            
+                        </td>
+                        <td>{{p.age}}</td>
+                        <td>{{p.steroid}}</td>
+                        <td>{{p.bilirubin}}</td>
+                    </tr>
+                    {% endfor %}
+                    
+                    
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
+            </table>
+        </div>
+        
+    </div>
+</div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+    $(function () {
+        anime({
+            targets: '.card',
+            scale: [.9,1],
+            delay: 500
+        });
+    });
+</script>
+{% endblock %}

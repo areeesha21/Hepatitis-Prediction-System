@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+  body{
+      /* background-color:rgb(20, 95, 95); */
+      background-image: url('/static/images/virus.jpg.crdownload');
+      background-repeat: no-repeat;
+      background-position:center;
+      background-size: cover;
+  }
+</style>
+{% endblock %}
+{% block body %}
+    <div class="container vh-100 " >
+        <div class="row">
+           <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold">Ai Prediction</h1>
+              <p class="col-md-8 fs-4">{{session.result}}</p>
+              <a href="/home" class="btn btn-primary btn-lg" type="button">Enter New Patient Details</a>
+            </div>
+             </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+<script>
+      $(function () {
+          anime({
+          targets: '.card',
+          scale: [.9,1],
+          delay: 500
+        });
+      });
+</script>
+{% endblock %}

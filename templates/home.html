@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+  body{
+    background-color: rgba(33, 166, 189, 0.451);
+    
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <form class="row" method="post">
+    <div class="col-md-6 my-5">
+      <div class="card"> 
+        <div class="card-body">
+          <h4 class="card-title">Patient Detail Form</h4>
+          <p class="card-text">fill the form</p>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" placeholder="">
+            <small id="nameHelp" class="form-text text-muted"></small>
+          </div>  
+          <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="text" class="form-control" name="age" id="age" aria-describedby="ageHelp" placeholder="">
+            <small id="ageHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label for="sex" class="form-label">Sex</label>
+            <select class="form-control" name="sex" id="sex" aria-describedby="sexHelp">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <small id="sexHelp" class="form-text text-muted"></small>
+            <div class="mb-3">
+              <label class="form-label">Steroid</label>
+              <div>
+                <input type="radio" class="form-check-input" name="steroid" id="steroid1" value="1" checked aria-describedby="steroidHelp">
+                <label for="steroid1" class="form-check-label">1</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" name="steroid" id="steroid2" value="2" aria-describedby="steroidHelp">
+                <label for="steroid2" class="form-check-label">2</label>
+              </div>
+              <small id="steroidHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Antivirals</label>
+              <div>
+                <input type="radio" class="form-check-input" name="antivirals" id="antivirals1" value="1" checked aria-describedby="antiviralsHelp">
+                <label for="antivirals1" class="form-check-label">1</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" name="antivirals" id="antivirals2" value="2" aria-describedby="antiviralsHelp">
+                <label for="antivirals2" class="form-check-label">2</label>
+              </div>
+              <small id="antiviralshelp" class ="form-text text-muted "></small>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Fatigue</label>
+              <div>
+                <input type="radio" class="form-check-input" name="fatigue" id="fatigue1" value="1" checked aria-describedby="fatigueHelp">
+                <label for="fatigue1" class="form-check-label">1</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" name="fatigue" id="fatigue2" value="2" aria-describedby="fatigueHelp">
+                <label for="fatigue2" class="form-check-label">2</label>
+              </div>
+              <small id="fatiguehelp" class ="form-text text-muted "></small>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Malaise</label>
+              <div>
+                <input type="radio" class="form-check-input" name="malaise" id="malaise1" value="1" checked aria-describedby="malaiseHelp">
+                <label for="malaise1" class="form-check-label">1</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" name="malaise" id="malaise2" value="2" aria-describedby="malaiseHelp">
+                <label for="malaise2" class="form-check-label">2</label>
+              </div>
+              <small id="malaisehelp" class ="form-text text-muted "></small>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Anorexia</label>
+              <div>
+                <input type="radio" class="form-check-input" name="anorexia" id="anorexia1" value="1" aria-describedby="anorexiaHelp" checked>
+                <label for="anorexia1" class="form-check-label">1</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" name="anorexia" id="anorexia2" value="2" aria-describedby="anorexiaHelp">
+                <label for="anorexia2" class="form-check-label">2</label>
+              </div>
+              <small id="anorexiahelp" class ="form-text text-muted "></small>
+            </div> 
+            <div class="mb-3">
+              <label class="form-label">Liver_big</label>
+              <div>
+                <input type="radio" class="form-check-input" name="liver_big" id="liver_big1" value="1" checked aria-describedby="liver_bigHelp">
+                <label for="liver_big1" class="form-check-label">1</label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" name="liver_big" id="liver_big2" value="2" aria-describedby="liver_bigHelp">
+                <label for="liver_big2" class="form-check-label">2</label>
+              </div>
+              <small id="liver_bighelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 my-5">
+      <div class="card"style=>
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label">Liver_firm</label>
+            <div>
+              <input type="radio" class="form-check-input" name="liver_firm" id="liver_firm1" value="1" checked aria-describedby="liver_firmHelp">
+              <label for="liver_firm1" class="form-check-label">1</label>
+            </div>
+            <div>
+              <input type="radio" class="form-check-input" name="liver_firm" id="liver_firm2" value="2"  aria-describedby="liver_firmHelp">
+              <label for="liver_firm2" class="form-check-label">2</label>
+            </div>
+            <small id="liver_firmhelp" class="form-text text-muted"></small>
+          </div> 
+          <div class="mb-3">
+            <label class="form-label">Spleen_palpable</label>
+            <div>
+              <input type="radio" class="form-check-input" name="spleen_palpable" id="spleen_palpable1" checked value="1" aria-describedby="spleen_palpableHelp">
+              <label for="spleen_palpable1" class="form-check-label">1</label>
+            </div>
+            <div>
+              <input type="radio" class="form-check-input" name="spleen_palpable" id="spleen_palpable2" value="2" aria-describedby="spleen_palpableHelp">
+              <label for="spleen_palpable2" class="form-check-label">2</label>
+            </div>
+            <small id="spleen_palpablehelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Spiders</label>
+            <div>
+              <input type="radio" class="form-check-input" name="spiders" id="spiders1" value="1" checked aria-describedby="spidersHelp">
+              <label for="spiders1" class="form-check-label">1</label>
+            </div>
+            <div>
+              <input type="radio" class="form-check-input" name="spiders" id="spiders2" value="2" aria-describedby="spidersHelp">
+              <label for="spiders2" class="form-check-label">2</label>
+            </div>
+            <small id="spidershelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Ascites</label>
+            <div>
+              <input type="radio" class="form-check-input" name="ascites" checked id="ascites1" value="1" aria-describedby="ascitesHelp">
+              <label for="ascites1" class="form-check-label">1</label>
+            </div>
+            <div>
+              <input type="radio" class="form-check-input" name="ascites" id="ascites2" value="2" aria-describedby="ascitesHelp">
+              <label for="ascites2" class="form-check-label">2</label>
+            </div>
+            <small id="asciteshelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Histology</label>
+            <div>
+              <input type="radio" class="form-check-input" name="histology" id="histology1" value="1" checked aria-describedby="histologyHelp">
+              <label for="histology1" class="form-check-label">1</label>
+            </div>
+            <div>
+              <input type="radio" class="form-check-input" name="histology" id="histology2" value="2" aria-describedby="histologyHelp">
+              <label for="histology2" class="form-check-label">2</label>
+            </div>
+            <small id="histologyhelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Varices</label>
+            <div>
+              <input type="radio" class="form-check-input" name="varices" id="varices1" value="1" checked aria-describedby="varicesHelp">
+              <label for="varices1" class="form-check-label">1</label>
+            </div>
+            <div>
+              <input type="radio" class="form-check-input" name="varices" id="varices2" value="2" aria-describedby="varicesHelp">
+              <label for="varices2" class="form-check-label">2</label>
+            </div>
+            <small id="variceshelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label for="bilirubin" class="form-label">Bilirubin</label>
+            <input type="number" class="form-control" name="Bilirubin" id="bilirubin" aria-describedby="bilirubinHelp" step="0.01">
+            <small id="bilirubinHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label for="alk_phosphate" class="form-label">Alk Phosphate</label>
+            <input type="number" class="form-control" name="alk_phosphate" id="alk_phosphate" aria-describedby="alkPhosphateHelp" step="0.01">
+            <small id="alkPhosphateHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label for="sgot" class="form-label">Sgot</label>
+            <input type="number" class="form-control" name="sgot" id="sgot" aria-describedby="sgotHelp" step="0.01">
+            <small id="sgotHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label for="albumin" class="form-label">Albumin</label>
+            <input type="number" class="form-control" name="albumin" id="albumin" aria-describedby="albuminHelp" step="0.01">
+            <small id="albuminHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="mb-3">
+            <label for="protime" class="form-label">Protime</label>
+            <input type="number" class="form-control" name="protime" id="protime" aria-describedby="protimeHelp" step="0.01">
+            <small id="protimeHelp" class="form-text text-muted"></small>
+          </div>          
+          
+          <button class="btn btn-success btn-block">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}                    
+{%block js %}{%endblock%}

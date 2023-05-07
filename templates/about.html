@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block css %}
+<style>
+    p{
+        padding-top: 0px;
+        text-indent: 20px;
+        font-weight: 500;
+        font-size:xx-large;
+        font-variant: small-caps;
+        text-shadow: 8px 8px 12px #000000;
+        border: black;
+        /* padding-right:250px; */
+   
+    }
+    body{
+        background-image:url('/static/images/about4.png');
+        background-position:top -900px left 20px;
+
+    }
+    h1{
+        color:aliceblue;
+        text-shadow: 2px 2px 4px #000000;
+        
+    }
+
+    /* .container {
+    text-align: left;
+    padding-right: 80px;
+    padding-left:0px;
+   
+  }
+   */
+</style>
+</style>{% endblock %}
+{% block body %}
+<h1 style="text-align:center;">Welcome to the Hepatitis Prediction System !</h1> 
+<!-- <div class=" container"> -->
+<p style =color:aliceblue>A web application designed to help healthcare professionals predict 
+    and prevent Hepatitis infections. Our goal with this project is to 
+    provide an accessible and accurate tool that can assist in identifying 
+    potential cases of Hepatitis in patients.
+
+    The Hepatitis Prediction System was developed for diagnosis and treatment.
+    We recognized the need for a reliable and efficient tool to predict Hepatitis
+    infections and decided to take on the challenge.
+    Our system uses advanced machine learning algorithms and data analysis techniques
+    to analyze patient data and provide predictions on the likelihood of Hepatitis
+    infection. We believe that this technology can help healthcare professionals make
+    more informed decisions about patient care, leading to improved health outcomes 
+    for individuals and communities.
+    <br>
+    <br>
+   Thank you for using the Hepatitis Prediction System. We are committed to providing the highest quality software and support for our users, and welcome any feedback or suggestions for improving our product.</p>
+<!-- </div> -->
+{% endblock %}
+{% block js %}{% endblock %}
