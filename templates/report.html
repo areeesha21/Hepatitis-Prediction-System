@@ -12,9 +12,9 @@
 </style>
 {% endblock %}
 {% block body %}
-<div class="container vh-100 " >
+<div class="container vh-150 " >
     <div class="row">
-        <div class="col-sm-12 col-md-7" style="margin-top: 4rem;">
+        <div class="col-sm-12 col-md-12" style="margin-top: 4rem;">
             <div class="table-responsive">
                 <table class="table table-striped
                 table-hover	
@@ -29,6 +29,12 @@
                         <th>Age</th>
                         <th>Steroid</th>
                         <th>Bilirubin</th>
+                        <th>antivirals</th>
+                        <th>fatigue</th>
+                        <th>malaise</th>
+                        <th>anorexia</th>
+                        <th>varices</th>
+
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -50,6 +56,11 @@
                         <td>{{p.age}}</td>
                         <td>{{p.steroid}}</td>
                         <td>{{p.bilirubin}}</td>
+                        <td>{{p.antivirals}}</td>
+                        <td>{{p.fatigue}}</td>
+                        <td>{{p.malaise}}</td>
+                        <td>{{p.anorexia}}</td>
+                        <td>{{p.varices}}</td>
                     </tr>
                     {% endfor %}
                     
